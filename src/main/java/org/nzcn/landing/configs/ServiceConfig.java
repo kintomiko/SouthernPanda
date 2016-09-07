@@ -11,6 +11,7 @@ import org.nzcn.landing.services.impl.BaseRestServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.FileSystemResourceLoader;
 
 /**
  * Created by kinlin on 8/27/16.
@@ -33,4 +34,5 @@ public class ServiceConfig {
     public BaseRestService<User> userService(){
         return new BaseRestServiceImpl<User>(userRepository, User.class);
     }
+
 }

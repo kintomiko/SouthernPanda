@@ -1,5 +1,6 @@
 package org.nzcn.landing.configs;
 
+import org.nzcn.landing.models.FileEntity;
 import org.nzcn.landing.models.Item;
 import org.nzcn.landing.models.User;
 import org.springframework.context.annotation.Configuration;
@@ -16,6 +17,7 @@ public class RepositoryConfig extends RepositoryRestConfigurerAdapter {
     public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
         config.exposeIdsFor(User.class);
         config.exposeIdsFor(Item.class);
+        config.exposeIdsFor(FileEntity.class);
     }
 
 }

@@ -46,7 +46,7 @@ public class FileController {
                 out.write(outputByte, 0, (int)fileResponse.getFileResource().length());
             }
         } catch (IOException ex) {
-            throw new RuntimeException("IOError writing file to output stream");
+            throw new RuntimeException(ex);
         }
     }
 

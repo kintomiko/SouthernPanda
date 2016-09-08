@@ -1,6 +1,7 @@
 package org.nzcn.landing.models;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -14,6 +15,15 @@ public class User extends BaseEntity{
     private String lastName;
     private String email;
     private String password;
+    private String avatarId;
+
+    public String getAvatarId() {
+        return avatarId;
+    }
+
+    public void setAvatarId(String avatarId) {
+        this.avatarId = avatarId;
+    }
 
     public String getPassword() {
         return password;

@@ -27,6 +27,9 @@ public class UserController {
     public User updateUser(@RequestBody User user, @PathVariable String userId){
         User oldUser = userService.findObject(userId);
         user.setPassword(oldUser.getPassword());
+        if(user.getAvatarId()==null){
+            user.setAvatarId(oldUser.getAvatarId());
+        }
         return userService.update(userId, user);
     }
 }
